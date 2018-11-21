@@ -7,39 +7,40 @@ using System.ComponentModel.DataAnnotations;
 namespace HRMS.Models
 {
     [MetadataType(typeof(UserMetadata))]
-    public partial class User
-    {
+    public partial class User { 
+    
         public string ConfirmPassword { get; set; }
     }
 
     public class UserMetadata
     {
-        [Display(Name ="First Name")]
-        [Required(AllowEmptyStrings = false, ErrorMessage ="First name required")]
+        [Display(Name = "Imię")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "To pole jest wymagane")]
         public string FirstName { get; set; }
 
-        [Display(Name = "Last Name")]
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Last name required")]
+        [Display(Name = "Nazwisko")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "To pole jest wymagane")]
         public string LastName { get; set; }
 
-        [Display(Name ="Email ID")]
-        [Required(AllowEmptyStrings =false, ErrorMessage ="Email ID required")]
+        [Display(Name = "Email")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Wpisany adres e-mail nie jest poprawnym adresem")]
         [DataType(DataType.EmailAddress)]
         public string EmailID { get; set; }
 
-        [Display(Name ="Date of birth")]
+        [Display(Name = "Data urodzenia")]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString ="{0:MM/dd/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateOfBirth { get; set; }
 
-        [Required(AllowEmptyStrings =false, ErrorMessage ="Password is required")]
+        [Display(Name = "Hasło")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Hasło musi składać się z minimum 6 znaków")]
         [DataType(DataType.Password)]
-        [MinLength(6,ErrorMessage ="Minimum 6 characters required")]
+        [MinLength(6, ErrorMessage = "Hasło musi składać się z minimum 6 znaków")]
         public string Password { get; set; }
 
-        [Display(Name = "Confirm Password")]
+        [Display(Name = "Potwierdź hasło")]
         [DataType(DataType.Password)]
-        [Compare("Password",ErrorMessage ="Confirm password and password do not match")]
+        [Compare("Password", ErrorMessage = "Podane hasła różnią się")]
         public string ConfirmPassword { get; set; }
 
     }
