@@ -7,7 +7,7 @@
         public string PositionName { get; set; }
         public float Salary { get; set; }
         public float Bonus { get; set; }
-
+         
         public virtual User User { get; set; }
 
     }

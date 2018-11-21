@@ -11,6 +11,6 @@ namespace HRMS.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Wprowadż adres obiektu")]
         [StringLength(100)]
         public string AdressObiect { get; set; }
-
+         
     }
 }

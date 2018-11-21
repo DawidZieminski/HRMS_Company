@@ -16,7 +16,7 @@ namespace HRMS.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Hasło musi składać się z minimum 6 znaków")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
+         
         [Display(Name = "Zapamiętaj mnie")]
         public bool RememberMe { get; set; }
     }

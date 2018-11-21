@@ -18,6 +18,7 @@ namespace HRMS.Models
         public virtual User User { get; set; }
         public virtual Obiect Obiect { get; set; }
     }
+
     public enum TypePresence
     {
         Roboczy,

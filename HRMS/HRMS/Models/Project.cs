@@ -13,7 +13,7 @@ namespace HRMS.Models
         public DateTime DataProjectStart  { get; set; }
         public DateTime DataProjectEnd { get; set; }
         public string Description { get; set; }
-
+         
         public virtual Obiect Obiect { get; set; }
     }
 }

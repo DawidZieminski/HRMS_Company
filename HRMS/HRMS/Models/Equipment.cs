@@ -14,7 +14,7 @@ namespace HRMS.Models
         public string NameEquipment { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Podaj ilość")]
         public int QuantityEquipment { get; set; }
-
+         
         public virtual Obiect Obiect { get; set; }
     }
 }
