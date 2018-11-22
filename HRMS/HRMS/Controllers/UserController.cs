@@ -96,7 +96,7 @@ namespace HRMS.Controllers
         //Login POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(UserLogin login, string ReturnUrl = "")
+        public ActionResult Login(UserLogin login, string ReturnUrl = "User/Index")
         {
             string message = "";
             using (HRMS.DataBaseAccess.HRMSContext dc = new HRMS.DataBaseAccess.HRMSContext())
