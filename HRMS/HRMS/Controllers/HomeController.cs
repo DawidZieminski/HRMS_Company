@@ -12,7 +12,7 @@ namespace HRMS.Controllers
     {
         private HRMSContext db = new HRMSContext();
 
-        // GET: Home
+        // GET: Home 
         [Authorize]
         public ActionResult Index()
         {
