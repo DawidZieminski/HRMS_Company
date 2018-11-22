@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace HRMS.Controllers
 {
     public class HomeController : Controller
-
+         
     { 
         private HRMSContext db = new HRMSContext();
 
