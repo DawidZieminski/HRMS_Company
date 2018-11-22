@@ -9,7 +9,7 @@ namespace HRMS.Controllers
 {
     public class HomeController : Controller
 
-    {
+    { 
         private HRMSContext db = new HRMSContext();
 
         // GET: Home 
